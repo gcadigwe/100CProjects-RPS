@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include <time.h>
+#include <stdbool.h>
 
 char* options = "RPS";
 
@@ -92,7 +93,8 @@ void print_outcome(enum Outcome outcome){
 
 
 int main(){
-	
+	// bool loop = true; 
+	while (true) {
 	char user_choice[50];
 
 	char cmp_choice = get_computer_choice();
@@ -103,7 +105,7 @@ int main(){
 	enum Outcome outcome = compare_choices(cmp_choice, user_choice[0]);
 
 	print_outcome(outcome);
-	
 
+	}
 
 }
